@@ -1586,7 +1586,7 @@ a {
     position: absolute;
     left: -12px;
     top: -13px;
-    background: url(/sitemaker/templates/template51/img/calendar.svg)no-repeat;
+    background: url(/img/calendar.svg)no-repeat;
     background-size: cover;
     z-index: -1;
     width: 57px;
@@ -2923,7 +2923,7 @@ a {
     }
 
     .sm-color5 .sm-form .radio-input:not(:checked) {
-        background-image: url(/sitemaker/images/radio.svg?v=4)
+        background-image: url(/images/radio.svg)
     }
 }
 
