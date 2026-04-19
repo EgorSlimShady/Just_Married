@@ -220,8 +220,8 @@ input,
 label {
     -webkit-tap-highlight-color: transparent;
     -moz-tap-highlight-color: transparent;
-    -o-tap-highlight-color: transparent
-    /* tap-highlight-color: transparent */
+    -o-tap-highlight-color: transparent;
+    tap-highlight-color: transparent
 }
 
 @media (min-width:391px) {
@@ -455,7 +455,7 @@ img[src=""] {
     display: none
 }
 
-.ct-photo_editor-wrapper {
+/* .ct-photo_editor-wrapper {
     position: relative
 }
 
@@ -474,7 +474,7 @@ img[src=""] {
     background: url(/sitemaker/images/constr/ct-image-plus.svg)50% 50%no-repeat;
     background-size: 60%;
     background-color: rgba(0, 0, 0, .4)
-}
+} */
 
 :after,
 :before {
@@ -762,7 +762,7 @@ i[data-sm-tmonth] {
 }
 
 .sm-form .radio-input:checked {
-    background-image: url(/sitemaker/images/radio.svg?v=4)
+    background-image: url(img/radio.svg)
 }
 
 .sm-form__drinks[data-sm-anketa-toggle],
@@ -1100,7 +1100,7 @@ i[data-sm-tmonth] {
     font-size: 0;
     width: 50px;
     height: 34px;
-    background-image: url(/sitemaker/templates/template21/assets/img/arrow-left.svg);
+    background-image: url(img/arrow-left.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

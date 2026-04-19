@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: "kudry";
-    src: url(/fonts/kudry.otf);
+    src: url(fonts/kudry.otf);
     font-weight: 300;
     font-style: normal
 }
@@ -15,14 +15,14 @@
 @font-face {
     font-family: "Kids";
     src: url(fonts/LD-Regular.eot);
-    src: url(fonts/LD-Regular.eot?#iefix)format("embedded-opentype"), url(/fonts/LD-Regular.woff)format("woff"), url(fonts/LD-Regular.ttf)format("truetype");
+    src: url(fonts/LD-Regular.eot?#iefix)format("embedded-opentype"), url(fonts/LD-Regular.woff)format("woff"), url(fonts/LD-Regular.ttf)format("truetype");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/fonts/Inter-Thin.otf);
+    src: url(fonts/Inter-Thin.otf);
     font-weight: 100;
     font-style: normal
 }
@@ -54,20 +54,20 @@
     --svg-clr: rgba(0, 0, 0, 0.05);
     --svg-clr2: #739f72; /* --svg-clr2: #ACACAC; */
     --svg-clr3: #000;
-    --url-bg: url("/img/bg_child.png");
+    --url-bg: url("img/bg_child.png");
     --bg-url-clr: #fff;
     --clr-line: #333333;
     --clr-line2: #FFFFFF;
     --bg-line: #fff;
     --bg-line2: #000;
-    --url-arrow: url(../img/arrow-left.webp);
+    --url-arrow: url(img/arrow-left.webp);
     --modal-text: #000;
-    --modal-arrow: url(../img/modal_arrow.webp);
+    --modal-arrow: url(img/modal_arrow.webp);
     --modal-btn-clr: #000000;
     --modal-btn-bg: #FFFFFF;
-    --modal-checkbox: url(../img/square-1.webp);
-    --checkbox: url(../img/square-1.webp);
-    --checkbox-active: url(../img/square.webp);
+    --modal-checkbox: url(img/square-1.webp);
+    --checkbox: url(img/square-1.webp);
+    --checkbox-active: url(img/square.webp);
     --checkbox-color: #161711;
     --checkbox-active-color: #5f6a57;
     --modal-checkbox-color: #161711;
@@ -91,7 +91,7 @@
     --clr-text-cal: #333333;
     --bg-clr2: #000000;
     --bg-clr3: rgba(0, 0, 0, 0.3);
-    --url-bg: url("/img/bg_child.png");
+    --url-bg: url("img/bg_child.png");
     --clr-line2: #FFFFFF;
     --bg-line2: #000
 }
@@ -114,13 +114,13 @@
     --bg-blend: color-burn;
     --clr-line: #363829;
     --bg-line: #fff;
-    --url-arrow: url(../img/arrow-left.webp);
+    --url-arrow: url(img/arrow-left.webp);
     --modal-text: #000;
-    --modal-arrow: url(../img/modal_arrow.webp);
+    --modal-arrow: url(img/modal_arrow.webp);
     --modal-btn-clr: #000000;
     --modal-btn-bg: #AEB0A1;
-    --modal-checkbox: url(../img/square-1.webp);
-    --checkbox: url(../img/square-1.webp)
+    --modal-checkbox: url(img/square-1.webp);
+    --checkbox: url(img/square-1.webp)
 }
 
 .sm-color3,
@@ -146,13 +146,13 @@
     --bg-url-clr: #E4DDD5;
     --clr-line: #000000;
     --bg-line: #fff;
-    --url-arrow: url(../img/arrow-left.webp);
+    --url-arrow: url(img/arrow-left.webp);
     --modal-text: #000;
-    --modal-arrow: url(../img/modal_arrow.webp);
+    --modal-arrow: url(img/modal_arrow.webp);
     --modal-btn-clr: #000000;
     --modal-btn-bg: #FFFFFF;
-    --modal-checkbox: url(../img/square-1.webp);
-    --checkbox: url(../img/square-1.webp)
+    --modal-checkbox: url(img/square-1.webp);
+    --checkbox: url(img/square-1.webp)
 }
 
 .sm-color4,
@@ -164,11 +164,11 @@
     --svg-clr2: #FFFFFF;
     --bg-line: #FFFFFF;
     --modal-text: #fff;
-    --modal-arrow: url(../img/modal-arrow-w.webp);
+    --modal-arrow: url(img/modal-arrow-w.webp);
     --modal-btn-clr: #FFFFFF;
-    --modal-checkbox: url(../img/squareWa.webp);
-    --checkbox: url(../img/squareW.webp);
-    --checkbox-active: url(../img/squareWa.webp);
+    --modal-checkbox: url(img/squareWa.webp);
+    --checkbox: url(img/squareW.webp);
+    --checkbox-active: url(img/squareWa.webp);
     --modal-checkbox-color: #ffffff;
     --modal-checkbox-active-color: #ffffff
 }
@@ -183,7 +183,7 @@
     --svg-clr3: #FFFFFF;
     --bg-url-clr: rgba(41, 41, 41, 1);
     --clr-line: #FFFFFF;
-    --url-arrow: url(../img/arrow-left-w.webp);
+    --url-arrow: url(img/arrow-left-w.webp);
     --modal-btn-bg: #5D5D5D
 }
 
@@ -197,7 +197,7 @@
     --svg-clr3: #000000;
     --bg-url-clr: rgba(125, 134, 141, 1);
     --clr-line: #000000;
-    --url-arrow: url(../img/arrow-left.webp);
+    --url-arrow: url(img/arrow-left.webp);
     --modal-btn-bg: #A5AEB5
 }
 
@@ -1586,7 +1586,7 @@ a {
     position: absolute;
     left: -12px;
     top: -13px;
-    background: url(/img/calendar.svg)no-repeat;
+    background: url(img/calendar.svg)no-repeat;
     background-size: cover;
     z-index: -1;
     width: 57px;
@@ -2068,15 +2068,15 @@ a {
     width: 20px;
     height: 20px;
     margin-left: -50px;
-    mask: url(../img/square.svg);
-    -webkit-mask: url(../img/square.svg);
+    mask: url(img/square.svg);
+    -webkit-mask: url(img/square.svg);
     background: var(--checkbox-color);
     cursor: pointer
 }
 
 .sm-form_checkbox_input:checked+.sm-form_checkbox_box {
-    mask: url(../img/checked-square.svg);
-    -webkit-mask: url(../img/checked-square.svg);
+    mask: url(img/checked-square.svg);
+    -webkit-mask: url(img/checked-square.svg);
     background: var(--checkbox-active-color)
 }
 
@@ -2923,7 +2923,7 @@ a {
     }
 
     .sm-color5 .sm-form .radio-input:not(:checked) {
-        background-image: url(/images/radio.svg)
+        background-image: url(img/radio.svg)
     }
 }
 
