@@ -1007,91 +1007,131 @@
 
         <!-- Анкета гостя Форма -->
         <section class="sm-questionnaire sm-edit jsScroll__scrolled" data-type="10" data-jsscroll="" data-jsscroll-slide-top="">
-        <div class="sm-background-photo sm-background-photo__bg" style=""></div>
-        <div class="sm-questionnaire__container">
-            <div class="sm-questionnaire__top">
-                <h2 class="sm-cormorantRegular-70-30" data-sm-text="ANKETA_TITLE" title="Анкета гостя">Анкета гостя</h2>
-                <div class="sm-manropeBold-20-18 sm-questionnaire__top-text" data-sm-text="ANKETA_TEXT" title="Пожалуйста, подтвердите своё присутствие на мероприятии до:">Пожалуйста, подтвердите своё присутствие на мероприятии до:</div>
-                <div class="sm-questionnaire__content-date sm-cormorantRegular-50-30">
-                    <span data-sm-bday="">01</span> / <span data-sm-bmonth="">08</span> / <span data-sm-byear="">26</span>
+            <div class="sm-background-photo sm-background-photo__bg" style=""></div>
+            <div class="sm-questionnaire__container">
+                <div class="sm-questionnaire__top">
+                    <h2 class="sm-cormorantRegular-70-30" data-sm-text="ANKETA_TITLE" title="Анкета гостя">
+                        Анкета гостя
+                    </h2>
+                    <div class="sm-manropeBold-20-18 sm-questionnaire__top-text" data-sm-text="ANKETA_TEXT"
+                        title="Пожалуйста, подтвердите своё присутствие на мероприятии до:">
+                        Пожалуйста, подтвердите своё присутствие на мероприятии до:
+                    </div>
+                    <div class="sm-questionnaire__content-date sm-cormorantRegular-50-30">
+                        <span data-sm-bday="">01</span> / <span data-sm-bmonth="">07</span> / <span data-sm-byear="">26</span>
+                    </div>
                 </div>
-            </div>
-            <div class="sm-questionnaire-btn sm-btn open-modal pulse-button">Подтвердить</div>
-            <div class="sm-questionnaire-form background-paint-background">
+                <div class="sm-questionnaire-btn sm-btn open-modal pulse-button">
+                    Подтвердить
+                </div>
+                <div class="sm-questionnaire-form background-paint-background">
 
-                <form class="sm-form">
-                    <div class="sm-form__wrapper">
-                        <div class="sm-form__left">
-                            <div class="sm-form__block">
-                                <div class="bold">Пожалуйста, подтвердите Ваше присутствие:</div>
-                                <input class="sm-form__input" type="text" placeholder="Имя и Фамилия" data-sm-anketa-name="">
-                            </div>
+                    <form class="sm-form">
+                        <div class="sm-form__wrapper">
+                            <div class="sm-form__left">
+                                <div class="sm-form__block">
+                                    <div class="bold">
+                                        Пожалуйста, подтвердите Ваше присутствие:
+                                    </div>
+                                    <input class="sm-form__input" type="text" placeholder="Имя и Фамилия" data-sm-anketa-name="">
+                                </div>
 
-                            <div class="sm-form__block">
-                                <div class=" bold" data-sm-text="ANKETA_QUESTION" title="Планируете ли Вы присутствовать?">Планируете ли Вы присутствовать?</div>
+                                <div class="sm-form__block">
+                                    <div class=" bold" data-sm-text="ANKETA_QUESTION" title="Планируете ли Вы присутствовать?">
+                                        Планируете ли Вы присутствовать?
+                                    </div>
 
-                                <div class="sm-form__item">
-                                    <label class="sm-form__item-radio">
-                                        <input class="radio-input" type="radio" name="choice" value="1" data-answer="">
-                                        <span data-sm-text="ANKETA_ANSWER1" title="Да, с удовольствием">Да, с удовольствием</span>
-                                    </label>
-                                    <label class="sm-form__item-radio">
-                                        <input class="radio-input" type="radio" name="choice" value="2" data-answer="">
-                                        <span data-sm-text="ANKETA_ANSWER2" title="Не смогу">Не смогу</span>
-                                    </label>
+                                    <div class="sm-form__item">
+                                        <label class="sm-form__item-radio">
+                                            <input class="radio-input" type="radio" name="choice" value="1"
+                                                data-answer="">
+                                            <span data-sm-text="ANKETA_ANSWER1" title="Да, с удовольствием">
+                                                Да, с удовольствием
+                                            </span>
+                                        </label>
+                                        <label class="sm-form__item-radio">
+                                            <input class="radio-input" type="radio" name="choice" value="2"
+                                                data-answer="">
+                                            <span data-sm-text="ANKETA_ANSWER2" title="Не смогу">
+                                                Не смогу
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="sm-form__block">
+                                    <div class=" bold">
+                                        Если Вы будете не одни, пожалуйста, заполните поле ниже:
+                                    </div>
+                                    <input class="sm-form__input" type="text"
+                                        placeholder="Имя и Фамилия Вашего спутника/спутницы" data-sm-anketa-company="">
                                 </div>
                             </div>
-                            <div class="sm-form__block">
-                                <div class=" bold">Если Вы будете не одни, пожалуйста, заполните поле ниже:</div>
-                                <input class="sm-form__input" type="text" placeholder="Имя и Фамилия Вашего спутника/спутницы" data-sm-anketa-company="">
-                            </div>
-                        </div>
-                        <div class="sm-form__block" data-sm-anketa-toggle="">
-                            <div class="bold" data-sm-text="ANKETA_DRINKS_QUESTION">Ваши предпочтения</div>
-                            <div class="sm-form__drinks">
-                                <div class="sm-form__drinks-check mr-40px" data-sm-anketa="1">
-                                <div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco10" name="alco[]" value="1">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco10" data-sm-alcoitem="">Шампанское</label>
-                                    </div><div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco20" name="alco[]" value="2">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco20" data-sm-alcoitem="">Белое вино</label>
-                                    </div><div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco30" name="alco[]" value="3">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco30" data-sm-alcoitem="">Красное вино</label>
-                                    </div><div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco40" name="alco[]" value="4">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco40" data-sm-alcoitem="">Виски</label>
-                                    </div><div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco50" name="alco[]" value="5">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco50" data-sm-alcoitem="">Водка</label>
-                                    </div><div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco60" name="alco[]" value="6">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco60" data-sm-alcoitem="">Джин</label>
-                                    </div><div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco70" name="alco[]" value="7">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco70" data-sm-alcoitem="">Ром</label>
-                                    </div><div class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco80" name="alco[]" value="8">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco80" data-sm-alcoitem="">Не пью алкоголь</label>
-                                    </div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="sm-btn pulse-button" data-sm-anketa-send="1">Отправить</button>
-                </form>
+                            <div class="sm-form__block" data-sm-anketa-toggle="">
+                                <div class="bold" data-sm-text="ANKETA_DRINKS_QUESTION">Ваши предпочтения</div>
+                                <div class="sm-form__drinks">
+                                    <div class="sm-form__drinks-check mr-40px" data-sm-anketa="1">
 
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco10" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Шампанское</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco20" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Белое вино</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco30" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Красное вино</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco40" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Виски</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco50"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Водка</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco60"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Джин</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco70"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Ром</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco80"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Не пью алкоголь</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="sm-btn pulse-button" data-sm-anketa-send="1">Отправить</button>
+                    </form>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <!-- Фото -->
         <section class="sm-bg-image sm-edit" data-type="11" data-jsscroll="" data-jsscroll-slide-top="">
@@ -1125,7 +1165,7 @@
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M46.9605 23.6V24.6C23.5605 24.6 23.9605 24.7 23.8605 54.6H22.8605C22.8605 24.7 23.4605 24.6 0.060547 24.6V23.6C23.4605 23.6 22.9605 24.6 22.9605 0.599998H23.9605C23.9605 24.5 23.5605 23.6 46.9605 23.6Z"
-                                    fill="black"></path>
+                                    fill="#739f72"></path>
                             </svg>
                             <br>
                             <span class="sm-cormorantRegular-70-30">и</span>
@@ -1135,7 +1175,11 @@
                 </div>
             </div>
         </section>
-
+        
+        <a href="#" title="Катимся в топ" class="topbtn">
+            <img src="img/arrow-up-circle-fill.svg" class="page-up-transparent">
+        </a>
+        
         <!-- Модальные окна -->
         <div class="sm-modal" id="modal">
             <div class="sm-container">
@@ -1180,54 +1224,57 @@
                             </div>
                             <div class="sm-form__drinks">
                                 <div class="sm-form__drinks-check mr-40px" data-sm-anketa="1">
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco11" name="alco[]"
-                                            value="1">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco11" data-sm-alcoitem="">Шампанское</label>
-                                    </div>
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco21" name="alco[]"
-                                            value="2">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco21" data-sm-alcoitem="">Белое вино</label>
-                                    </div>
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco31" name="alco[]"
-                                            value="3">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco31" data-sm-alcoitem="">Красное вино</label>
-                                    </div>
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco41" name="alco[]"
-                                            value="4">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco41" data-sm-alcoitem="">Виски</label>
-                                    </div>
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco51" name="alco[]"
-                                            value="5">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco51" data-sm-alcoitem="">Водка</label>
-                                    </div>
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco61" name="alco[]"
-                                            value="6">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco61" data-sm-alcoitem="">Джин</label>
-                                    </div>
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco71" name="alco[]"
-                                            value="7">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco71" data-sm-alcoitem="">Ром</label>
-                                    </div>
-                                    <div class="sm-form_checkbox sm-manropeLight-20-18">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco81" name="alco[]"
-                                            value="8">
-                                        <span class="sm-form_checkbox_box text-paint-border"></span>
-                                        <label for="alco81" data-sm-alcoitem="">Не пью алкоголь</label>
-                                    </div>
+                                    <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco10" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Шампанское</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco20" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Белое вино</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco30" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Красное вино</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco40" name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Виски</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco50"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Водка</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco60"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Джин</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco70"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Ром</span>
+                                        </label>
+
+                                        <label class="sm-form_checkbox">
+                                            <input class="sm-form_checkbox_input" type="checkbox" id="alco80"
+                                                name="alco[]" value="1">
+                                            <span class="sm-form_checkbox_box"></span>
+                                            <span>Не пью алкоголь</span>
+                                        </label>
                                 </div>
                             </div>
                         </div>
@@ -1257,6 +1304,105 @@
             </div>
         </div>
     </main>
+
+    <script>
+        // Получаем все чекбоксы
+        const checkboxes = document.querySelectorAll('.sm-form_checkbox_input');
+
+        // Идентификаторы чекбоксов с напитками и "Не пью алкоголь"
+        const alcoholCheckboxes = ['alco10', 'alco20', 'alco30', 'alco40', 'alco50', 'alco60', 'alco70']; // Алкоголь
+        const noAlcoholCheckbox = 'alco80'; // "Не пью алкоголь"
+
+        // Функция для сброса всех чекбоксов с алкоголем
+        function uncheckAlcohol() {
+            alcoholCheckboxes.forEach(id => {
+                const checkbox = document.getElementById(id);
+                checkbox.checked = false;
+            });
+        }
+
+        // Функция для сброса "Не пью алкоголь"
+        function uncheckNoAlcohol() {
+            const noAlcohol = document.getElementById(noAlcoholCheckbox);
+            noAlcohol.checked = false;
+        }
+
+        // Обработчик событий для всех чекбоксов
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.id === noAlcoholCheckbox) {
+                    // Если выбрали "Не пью алкоголь" — снимаем все остальные
+                    if (checkbox.checked) {
+                        uncheckAlcohol(); // Сбрасываем алкоголь
+                    }
+                } else {
+                    // Если выбрали алкоголь — снимаем "Не пью алкоголь"
+                    if (checkbox.checked) {
+                        uncheckNoAlcohol(); // Сбрасываем "Не пью алкоголь"
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- <script>
+        const TOKEN = "6053368284:AAEI46UybhGjc0_--nO5Sf7bZQwb6aDltLs";
+        const CHAT_ID = "-1001918851256";
+        const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+        // const success = document.getElementById('success');
+        let message = "";
+
+        document.getElementById('np').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // const formData = new FormData();
+            // formData.append('chat_id', CHAT_ID);
+            // formData.append('doc', this.document.files[0]);
+
+            message += `<b>Фамилия: </b>${ this.surname.value }\n`;
+            message += `<b>Имя: </b>${ this.name.value }\n`;
+            message += `<b>Отчество: </b>${ this.fathername.value }\n`;
+            message += `<b>Телефон: </b>${ this.tel.value }\n\n`;
+            message += `Я, <i>${ this.surname.value } ${ this.name.value } ${ this.fathername.value }</i>, ознакомлен и согласен со всеми правилами использования самокатов`;
+          
+            // formData.append('caption', message);
+            
+            axios.post(URL_API,
+            // formData, {
+            //             headers: {'Content-Type': 'multipart/form-data'}
+            //           })
+            {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: message
+            })
+            .then((res) =>
+            {
+                this.surname.value = "";
+                this.name.value = "";
+                this.fathername.value = "";
+                this.tel.value = "";
+                this.chbx.checked = false;
+                this.btn.disabled = true;
+                success.innerHTML = "Активация прошла успешно!";
+                success.style.display = "block";
+                setTimeout(function()
+                    {
+	                    success.style.display = 'none';
+                    }, 3500);
+                e.preventDefault();
+            })
+            .catch((err) =>
+            {
+                console.log(err);
+            })
+            // .finally(() =>
+            // {
+            //     console.log('END!');
+            // })
+        })
+    </script> -->
+
     <script src="js/template_compiled_mini.js"></script>
     <script src="js/main.js"></script>
     <script>

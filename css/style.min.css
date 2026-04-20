@@ -5,6 +5,23 @@
     box-sizing: border-box
 }
 
+/* Стиль кнопки вверх */
+    .topbtn {
+        position: fixed;
+        right: 45px;
+        bottom: 45px;
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    /* Стиль кнопки вверх */
+    .page-up-transparent {
+        filter: alpha(Opacity=50);
+        opacity: 0.5;
+        width: 45px;
+        height: 45px;
+    }
+
 @font-face {
     font-family: "kudry";
     src: url(../fonts/kudry.otf);
@@ -1858,7 +1875,8 @@ a {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    flex-direction: column
+    flex-direction: column;
+    gap: 30px
 }
 
 @media (max-width:500px) {
@@ -2544,8 +2562,8 @@ a {
 }
 
 .sm-btn:hover {
-    background: var(--bg-btn-hover);
-    color: var(--clr-btn-hover);
+    background: #739f72;/* background: var(--bg-btn-hover); */
+    color: var(--bg-btn-hover);
     border: 1px solid var(--bg-btn-hover)
 }
 
