@@ -1404,7 +1404,8 @@ a {
 .sm-bg-text {
     font-family: "Kudry";
     font-weight: 300;
-    color: var(--svg-clr);
+    color: #739f72; /* color: var(--clr-date) */
+    opacity: 0.75;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -1634,7 +1635,7 @@ a {
 
 @media (max-width:500px) {
     .sm-wishes__content {
-        padding: 64px 0 140px;
+        padding: 64px 0 70px;
         gap: 32px
     }
 }
@@ -1661,7 +1662,7 @@ a {
 }
 
 .sm-wishes__content-slider {
-    padding-bottom: 76px
+    padding-bottom: 64px
 }
 
 .sm-slider .slick-arrow {
@@ -2068,15 +2069,15 @@ a {
     width: 20px;
     height: 20px;
     margin-left: -50px;
-    mask: url(../img/square.svg);
-    -webkit-mask: url(../img/square.svg);
+    mask: url(/img/square.svg);
+    -webkit-mask: url(/img/square.svg);
     background: var(--checkbox-color);
     cursor: pointer
 }
 
 .sm-form_checkbox_input:checked+.sm-form_checkbox_box {
-    mask: url(../img/checked-square.svg);
-    -webkit-mask: url(../img/checked-square.svg);
+    mask: url(/img/checked-square.svg);
+    -webkit-mask: url(/img/checked-square.svg);
     background: var(--checkbox-active-color)
 }
 
@@ -2854,7 +2855,7 @@ a {
     }
 
     .sm-wishes__content-wrap_text {
-        bottom: -64px;
+        bottom: 0;
         right: 0
     }
 

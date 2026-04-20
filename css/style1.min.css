@@ -455,27 +455,6 @@ img[src=""] {
     display: none
 }
 
-/* .ct-photo_editor-wrapper {
-    position: relative
-}
-
-.ct-photo_editor-wrapper:before {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    width: 60px;
-    height: 60px;
-    content: "";
-    z-index: 200;
-    border-radius: 100%;
-    overflow: hidden;
-    background: url(/sitemaker/images/constr/ct-image-plus.svg)50% 50%no-repeat;
-    background-size: 60%;
-    background-color: rgba(0, 0, 0, .4)
-} */
-
 :after,
 :before {
     pointer-events: none !important
