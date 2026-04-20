@@ -7,22 +7,22 @@
 
 @font-face {
     font-family: "kudry";
-    src: url(../fonts/kudry.otf);
+    src: url(/fonts/kudry.otf);
     font-weight: 300;
     font-style: normal
 }
 
 @font-face {
     font-family: "Kids";
-    src: url(../fonts/LD-Regular.eot);
-    src: url(../fonts/LD-Regular.eot?#iefix)format("embedded-opentype"), url(../fonts/LD-Regular.woff)format("woff"), url(../fonts/LD-Regular.ttf)format("truetype");
+    src: url(/fonts/LD-Regular.eot);
+    src: url(/fonts/LD-Regular.eot?#iefix)format("embedded-opentype"), url(../fonts/LD-Regular.woff)format("woff"), url(../fonts/LD-Regular.ttf)format("truetype");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(../fonts/Inter-Thin.otf);
+    src: url(/fonts/Inter-Thin.otf);
     font-weight: 100;
     font-style: normal
 }
