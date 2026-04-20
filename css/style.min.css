@@ -2069,15 +2069,15 @@ a {
     width: 20px;
     height: 20px;
     margin-left: -50px;
-    mask: url(/img/square.svg);
-    -webkit-mask: url(/img/square.svg);
+    mask: url(img/square.svg);
+    -webkit-mask: url(img/square.svg);
     background: var(--checkbox-color);
     cursor: pointer
 }
 
 .sm-form_checkbox_input:checked+.sm-form_checkbox_box {
-    mask: url(/img/checked-square.svg);
-    -webkit-mask: url(/img/checked-square.svg);
+    mask: url(img/checked-square.svg);
+    -webkit-mask: url(img/checked-square.svg);
     background: var(--checkbox-active-color)
 }
 
@@ -2924,7 +2924,7 @@ a {
     }
 
     .sm-color5 .sm-form .radio-input:not(:checked) {
-        background-image: url(../img/radio.svg)
+        background-image: url(img/radio.svg)
     }
 }
 
