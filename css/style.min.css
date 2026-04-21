@@ -6,21 +6,28 @@
 }
 
 /* Стиль кнопки вверх */
-    .topbtn {
-        position: fixed;
-        right: 45px;
-        bottom: 45px;
-        text-decoration: none;
-        font-size: 24px;
-    }
+.topbtn {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 9999; /* Самое высокое значение для перекрытия всех элементов */
+    display: none;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
 
-    /* Стиль кнопки вверх */
-    .page-up-transparent {
-        filter: alpha(Opacity=50);
-        opacity: 0.5;
-        width: 45px;
-        height: 45px;
-    }
+.topbtn.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Стиль кнопки вверх */
+.page-up-transparent {
+    filter: alpha(Opacity=50);
+    opacity: 0.5;
+    width: 45px;
+    height: 45px;
+}
 
 @font-face {
     font-family: "kudry";
@@ -69,7 +76,8 @@
     --bg-clr3: rgba(0, 0, 0, 0.3);
     --border-clr: #333333;
     --svg-clr: rgba(0, 0, 0, 0.05);
-    --svg-clr2: #739f72; /* --svg-clr2: #ACACAC; */
+    --svg-clr2: #739f72;
+    /* --svg-clr2: #ACACAC; */
     --svg-clr3: #000;
     --url-bg: url("../img/bg_child.png");
     --bg-url-clr: #fff;
@@ -757,7 +765,8 @@ a {
     font-weight: 300;
     line-height: 73.6px;
     text-align: center;
-    color: #739f72; /* color: var(--clr-date) */
+    color: #739f72;
+    /* color: var(--clr-date) */
 }
 
 .sm-location__content-description_text span,
@@ -1421,7 +1430,8 @@ a {
 .sm-bg-text {
     font-family: "Kudry";
     font-weight: 300;
-    color: #739f72; /* color: var(--clr-date) */
+    color: #739f72;
+    /* color: var(--clr-date) */
     opacity: 0.75;
     position: absolute;
     width: 100%;
@@ -1748,7 +1758,8 @@ a {
     font-weight: 300;
     line-height: 31.08px;
     text-align: right;
-    color: #739f72; /* color: #acacac; */
+    color: #739f72;
+    /* color: #acacac; */
     position: absolute;
     right: 0;
     bottom: 0
@@ -2562,7 +2573,8 @@ a {
 }
 
 .sm-btn:hover {
-    background: #739f72;/* background: var(--bg-btn-hover); */
+    background: #739f72;
+    /* background: var(--bg-btn-hover); */
     color: var(--bg-btn-hover);
     border: 1px solid var(--bg-btn-hover)
 }

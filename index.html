@@ -1173,9 +1173,13 @@
             </div>
         </section>
         
-        <a href="#" title="Катимся в топ" class="topbtn">
-            <img src="img/arrow-up-circle-fill.svg" class="page-up-transparent">
+        <a href="#" title="Вернуться наверх" class="topbtn" aria-label="Вернуться наверх">
+            <img src="img/arrow-up-circle-fill.svg" alt="Стрелка вверх" class="page-up-transparent">
         </a>
+
+        <!-- <a href="#" title="Катимся в топ" class="topbtn">
+            <img src="img/arrow-up-circle-fill.svg" class="page-up-transparent">
+        </a> -->
         
         <!-- Модальные окна -->
         <div class="sm-modal" id="modal">
@@ -1337,7 +1341,25 @@
             });
         });
     </script>
+
+    <script>
     
+        document.querySelector('.topbtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', function() {
+            const btn = document.querySelector('.topbtn');
+            if (window.pageYOffset > 200) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+    </script>
+
+    <!-- отправка в телегу -->
     <!-- <script>
         const TOKEN = "6053368284:AAEI46UybhGjc0_--nO5Sf7bZQwb6aDltLs";
         const CHAT_ID = "-1001918851256";
@@ -1401,11 +1423,6 @@
     <script type="text/javascript" src="js/js-scroll-animations.min.js"></script>
     
     <script>
-        if (window.location === window.parent.location && window.parent.location.origin === 'https://egorslimshady.github.io/Just_Married/') {
-            alert('no way!');
-            window.location.href = 'https://egorslimshady.github.io/Just_Married/';
-        }
-        else {
             var osections;
             var cursect = '';
             var own_timer;
@@ -1612,7 +1629,6 @@
                     setTimeout(() => { isThrottled = false; }, 100);
                 }
             })
-        }
     </script>
         
 </body>
