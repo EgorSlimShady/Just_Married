@@ -90,9 +90,9 @@
     --modal-arrow: url(../img/modal_arrow.webp);
     --modal-btn-clr: #000000;
     --modal-btn-bg: #FFFFFF;
-    --modal-checkbox: url(../img/square-1.webp);
-    --checkbox: url(../img/square-1.webp);
-    --checkbox-active: url(../img/square.webp);
+    --modal-checkbox: url(../img/square.svg);
+    --checkbox: url(../img/square.svg);
+    --checkbox-active: url(../img/checked-square.svg);
     --checkbox-color: #161711;
     --checkbox-active-color: #5f6a57;
     --modal-checkbox-color: #161711;
@@ -2509,7 +2509,7 @@ a {
     }
 
     .sm-button:after {
-        content: "";
+        content: url(../img/on_load.gif);/* content: ""; */
         display: block;
         width: 20px;
         height: 20px;
@@ -2968,7 +2968,11 @@ a {
 }
 
 .sm-mob-btn .sm-button {
-    font-size: 18px
+    /* здесь была только первая строка */
+    font-size: 18px; 
+    font-family: "SMHeadersFont";
+    letter-spacing: 1px;
+
 }
 
 .sm-main__content-date.sm-cormorantRegular-50,
