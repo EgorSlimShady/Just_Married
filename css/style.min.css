@@ -2127,7 +2127,7 @@ a {
     -o-transition: .3s all;
     transition: .3s all;
     background-color: var(--bg-url-clr);
-    z-index: 1000;
+    z-index: 10000;
     width: 100%;
     top: 0;
     left: 0;

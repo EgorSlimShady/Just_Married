@@ -49,7 +49,6 @@
         <div class="sm-mob-btn sm-hidden_slow">
             <div class="sm-button open-modal">
                 Подтвердить присутствие
-                <!-- <img src="/Just_Married_files/timing icon/timing_icon144.svg" alt="Иконка" style="width: 30px; height: 30px; vertical-align: middle; margin-left: 8px;"> -->
             </div>
         </div>
         <section class="sm-main sm-edit jsScroll__scrolled" data-type="1" data-jsscroll="" data-jsscroll-slide-top="">
@@ -155,11 +154,11 @@
                                 <span class="sm-cormorantLight-30-20px">пт</span>
                                 <span class="sm-cormorantLight-30-20px">сб</span>
                                 <span class="sm-cormorantLight-30-20px">вс</span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                <span class="sm-manropeSemiBold-20" style="color: rgb(207, 207, 207)">27</span>
+                                <span class="sm-manropeSemiBold-20" style="color: rgb(207, 207, 207)">28</span>
+                                <span class="sm-manropeSemiBold-20" style="color: rgb(207, 207, 207)">29</span>
+                                <span class="sm-manropeSemiBold-20" style="color: rgb(207, 207, 207)">30</span>
+                                <span class="sm-manropeSemiBold-20" style="color: rgb(207, 207, 207)">31</span>
                                 <span class="sm-manropeSemiBold-20 number-acrive">1</span>
                                 <span class="sm-manropeSemiBold-20">2</span>
                                 <span class="sm-manropeSemiBold-20">3</span>
@@ -1293,10 +1292,15 @@
                                         <span class="sm-form_checkbox_box"></span>
                                         <span>Ром</span>
                                     </label>
+                                    
+                                    <label class="sm-form_checkbox">
+                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco80" name="alco[]" value="Не пью алкоголь">
+                                        <span class="sm-form_checkbox_box"></span>
+                                        <span>Не пью алкоголь</span>
+                                    </label>
 
                                     <label class="sm-form_checkbox">
-                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco80" name="alco[]"
-                                            value="Не пью алкоголь">
+                                        <input class="sm-form_checkbox_input" type="checkbox" id="alco80" name="alco[]" value="Не пью алкоголь">
                                         <span class="sm-form_checkbox_box"></span>
                                         <span>Не пью алкоголь</span>
                                     </label>
@@ -1329,6 +1333,54 @@
 
     <!-- правила для алкоголя -->
     <script>
+        // Идентификаторы чекбоксов с напитками и "Не пью алкоголь"
+        const alcoholCheckboxes = ['alco10', 'alco20', 'alco30', 'alco40', 'alco50', 'alco60', 'alco70']; // Алкоголь
+        const noAlcoholCheckboxId = 'alco80'; // "Не пью алкоголь"
+
+        // 1. Вешаем один обработчик на весь документ
+        document.addEventListener('change', function(event) {
+            // 2. Проверяем, произошло ли событие на нашем чекбоксе
+            if (event.target.classList.contains('sm-form_checkbox_input')) {
+                
+                // Получаем элемент, на котором произошло событие
+                const changedCheckbox = event.target;
+                
+                // Находим родительскую форму, чтобы работать только с её элементами
+                const parentForm = changedCheckbox.closest('form.sm-form');
+                
+                // Если родительская форма найдена (безопасная проверка)
+                if (parentForm) {
+                    
+                    // --- ЛОГИКА ДЛЯ "НЕ ПЬЮ АЛКОГОЛЬ" ---
+                    if (changedCheckbox.id === noAlcoholCheckboxId) {
+                        // Если "Не пью алкоголь" выбрали (поставили галочку)
+                        if (changedCheckbox.checked) {
+                            // Снимаем галочки со всех алкогольных напитков в ЭТОЙ ЖЕ форме
+                            alcoholCheckboxes.forEach(id => {
+                                const alcoholCheckbox = parentForm.querySelector(`#${id}`);
+                                if (alcoholCheckbox) {
+                                    alcoholCheckbox.checked = false;
+                                }
+                            });
+                        }
+                    }
+                    
+                    // --- ЛОГИКА ДЛЯ АЛКОГОЛЬНЫХ НАПИТКОВ ---
+                    else {
+                        // Если выбрали любой алкогольный напиток (поставили галочку)
+                        if (changedCheckbox.checked) {
+                            // Снимаем галочку с "Не пью алкоголь" в ЭТОЙ ЖЕ форме
+                            const noAlcoholCheckbox = parentForm.querySelector(`#${noAlcoholCheckboxId}`);
+                            if (noAlcoholCheckbox) {
+                                noAlcoholCheckbox.checked = false;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <!-- <script>
         // Получаем все чекбоксы
         const checkboxes = document.querySelectorAll('.sm-form_checkbox_input');
 
@@ -1366,7 +1418,7 @@
                 }
             });
         });
-    </script>
+    </script> -->
 
     <!-- Кнопка вврех -->
     <script>
@@ -1387,7 +1439,115 @@
     </script>
 
     <!-- отправка в телегу -->
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Настройки Telegram
+        const TOKEN = "8652920050:AAFivttGCzj9S5fUl1VT5UeRtM8xpHra0n0";
+        const CHAT_ID = "-1003959204729";
+        const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+        // Найдите все формы с нужным классом
+const forms = document.querySelectorAll('.sm-form');
+
+forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Всегда отменяйте стандартную отправку
+
+        // Ваша логика сбора данных остается прежней
+        const name = form.querySelector('[data-sm-anketa-name]').value.trim() || 'Не указано';
+        const choice = form.querySelector('input[name="choice"]:checked');
+        const statusText = choice ? (choice.value === '1' ? '✅ Да, с удовольствием' : '❌ Не смогу') : 'Не выбран ответ';
+        const company = form.querySelector('[data-sm-anketa-company]').value.trim() || 'Гость один';
+        
+        // Напитки берем проще, через .value
+        const drinksCheckboxes = form.querySelectorAll('input[name="alco[]"]:checked');
+        const drinksList = Array.from(drinksCheckboxes).map(cb => cb.value);
+        const drinksText = drinksList.length > 0 ? drinksList.join(', ') : 'Напитки не выбраны';
+
+        // Формирование сообщения
+        let message = `🤡 *Новые нахлебники*\n\n`;
+        message += `👤 *Имя:* ${name}\n`;
+        message += `📋 *Статус:* ${statusText}\n`;
+        message += `🤝 *Спутник:* ${company}\n`;
+        message += `🍹 *Предпочтения:* ${drinksText}\n`;
+
+        // Отправка в Telegram
+        axios.post(URL_API, null, {
+            params: {
+                chat_id: CHAT_ID,
+                text: message,
+                parse_mode: 'Markdown'
+            }
+        }).then(() => {
+            alert('Анкета успешно отправлена!');
+            form.reset(); // Очистка формы
+        }).catch(err => {
+            console.error('Ошибка отправки:', err.message);
+            alert('Произошла ошибка при отправке. Проверьте консоль.');
+        });
+    });
+});
+    </script>
+    <!-- <script>
+        // Настройки Telegram
+        const TOKEN = "8652920050:AAFivttGCzj9S5fUl1VT5UeRtM8xpHra0n0";
+        const CHAT_ID = "-1003959204729";
+        const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+        // 1. Вешаем один обработчик на весь документ
+        document.addEventListener('submit', function(e) {
+            // 2. Проверяем, была ли отправлена наша форма
+            if (!e.target.classList.contains('sm-form')) return;
+
+            e.preventDefault(); // Останавливаем стандартную отправку
+
+            // 3. ВСЕГДА получаем форму через e.target
+            const form = e.target;
+
+            // 1. Собираем данные из полей формы
+            const name = form.querySelector('[data-sm-anketa-name]').value.trim() || 'Не указано';
+            const choice = form.querySelector('input[name="choice"]:checked');
+            const statusText = choice ? (choice.value === '1' ? '✅ Да, с удовольствием' : '❌ Не смогу') : 'Не выбран ответ';
+
+            const company = form.querySelector('[data-sm-anketa-company]').value.trim() || 'Гость один';
+
+            // Собираем массив выбранных напитков
+            const drinksCheckboxes = form.querySelectorAll('input[name="alco[]"]:checked');
+            const drinksList = Array.from(drinksCheckboxes).map(cb => cb.nextElementSibling.nextElementSibling.textContent.trim());
+            const drinksText = drinksList.length > 0 ? drinksList.join(', ') : 'Напитки не выбраны';
+            // const drinksCheckboxes = form.querySelectorAll('input[name="alco[]"]:checked');
+            // const drinksList = Array.from(drinksCheckboxes).map(cb => cb.nextElementSibling.textContent.trim());
+            // const drinksText = drinksList.length > 0 ? drinksList.join(', ') : 'Напитки не выбраны';
+
+            // 2. Формируем сообщение по шаблону (Markdown)
+            let message = `🤡 *Новые нахлебники*\n\n`;
+            message += `👤 *Имя:* ${name}\n`;
+            message += `📋 *Статус:* ${statusText}\n`;
+            message += `🤝 *Спутник:* ${company}\n`;
+            message += `🍹 *Предпочтения:* ${drinksText}\n`;
+
+            // 3. Отправляем запрос в Telegram API
+            axios.post(URL_API, null, {
+                params: {
+                    chat_id: CHAT_ID,
+                    text: message,
+                    parse_mode: 'Markdown' // Важно! Чтобы *звездочки* работали как жирный шрифт
+                }
+            })
+                .then((res) => {
+                    // Если всё прошло успешно
+                    alert('Анкета успешно отправлена!');
+                    form.reset(); // Очищаем форму
+                    console.log('Telegram API Response:', res.data);
+                })
+                .catch((err) => {
+                    console.error('Ошибка отправки в Telegram:', err);
+                    alert('Произошла ошибка при отправке. Проверьте консоль.');
+                });
+        });
+    </script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         // --- НАСТРОЙКИ ---
         const TOKEN = "8652920050:AAFivttGCzj9S5fUl1VT5UeRtM8xpHra0n0"; // const TOKEN = "6053368284:AAEI46UybhGjc0_--nO5Sf7bZQwb6aDltLs"; // ВАШ ТОКЕН 8652920050:AAFivttGCzj9S5fUl1VT5UeRtM8xpHra0n0
@@ -1442,7 +1602,7 @@
                     alert('Произошла ошибка при отправке. Проверьте консоль.');
                 });
         });
-    </script>
+    </script> -->
 
     <script src="js/template_compiled_mini.js"></script>
     <script src="js/main.js"></script>
