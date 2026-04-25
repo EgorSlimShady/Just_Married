@@ -428,7 +428,7 @@ img[src=""] {
     display: none
 }
 
-.ct-photo_editor-wrapper {
+/* .ct-photo_editor-wrapper {
     position: relative
 }
 
@@ -447,7 +447,7 @@ img[src=""] {
     background: url(/sitemaker/images/constr/ct-image-plus.svg)50% 50%no-repeat;
     background-size: 60%;
     background-color: rgba(0,0,0,.4)
-}
+} */
 
 :after,:before {
     pointer-events: none!important
@@ -461,7 +461,7 @@ i[data-sm-fyear],i[data-sm-tmonth] {
     border: 0!important
 }
 
-.modal-open .sm-form_checkbox_box,.sm-questionnaire-form .sm-form_checkbox_box {
+/* .modal-open .sm-form_checkbox_box,.sm-questionnaire-form .sm-form_checkbox_box {
     margin-left: 0!important;
     pointer-events: none
 }
@@ -472,7 +472,7 @@ i[data-sm-fyear],i[data-sm-tmonth] {
 
 .modal-open .sm-form_checkbox [data-sm-alcoitem],.sm-questionnaire-form .sm-form_checkbox [data-sm-alcoitem] {
     padding-left: 50px!important
-}
+} */
 
 .modal-open input[type=radio],.sm-questionnaire-form input[type=radio] {
     mix-blend-mode: multiply
