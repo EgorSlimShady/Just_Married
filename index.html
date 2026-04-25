@@ -27,19 +27,40 @@
 
     <script id="main-script" src="Just_Married_files/init.js"></script>
     <script>
-        // Оборачиваем в функцию для изоляции
-        (function () {
-            document.addEventListener("DOMContentLoaded", function () {
-                // Небольшая задержка (таймаут), чтобы дать скрипту "init" полностью отработать
-                // и подготовить все переменные на странице.
-                setTimeout(function () {
+        (function() {
+            document.addEventListener("DOMContentLoaded", function() {
+                // --- Блок для прокрутки и очистки URL ---
+
+                // 1. Пытаемся прокрутить стандартными методами (может сработать сразу)
+                window.scrollTo(0, 0);
+
+                // 2. Если не помогло, прыгаем на наш невидимый якорь
+                // Используем небольшую задержку, чтобы убедиться, что DOM готов
+                setTimeout(function() {
+                    if (window.scrollY !== 0) {
+                        // Переходим на якорь
+                        window.location.hash = 'top-anchor';
+
+                        // 3. Мгновенно удаляем хэш из адреса, чтобы он не мозолил глаза
+                        // Используем replaceState, чтобы не создавать новую запись в истории браузера
+                        if (window.history.replaceState) {
+                            window.history.replaceState(null, '', window.location.href.split('#')[0]);
+                        }
+                    }
+                }, 50); // Задержка 50мс
+
+                // --- Блок для запуска анимации ---
+                // Анимацию запускаем чуть позже, чтобы страница успела "успокоиться"
+                setTimeout(function() {
                     if (typeof jsScrollAnimations === 'function') {
                         jsScrollAnimations().init();
                     }
-                }, 100); // Задержка в 100 миллисекунд
+                }, 200); // Задержка 200мс для надежности анимации
+
             });
         })();
     </script>
+
 
     <script src="js/jquery-3.6.0.js" type="text/javascript"></script>
     <script src="Just_Married_files/slick.min.js" type="text/javascript"></script>
@@ -53,6 +74,8 @@
 </head>
 
 <body class="sm-template53 sm-color1 sm-scroll_type-1 sm-scroll_speed-1 sm-hfont-0 sm-project-" data-lang="ru">
+    
+    <a id="top-anchor" style="position: absolute; top: -9999px;"></a>
     <div class="sm-loader_wrapper">
         <div class="loader"></div>
     </div>
