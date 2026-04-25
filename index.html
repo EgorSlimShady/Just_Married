@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="Just_Married_files/font-awesome.min.css">
     <link rel="stylesheet" href="Just_Married_files/fancybox.min.css">
 
-    <!-- <link rel="stylesheet" href="../css/style1.min.css"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style1.min.css">
     <script src="Just_Married_files/slick.min.js" type="text/javascript"></script>
     <link rel="stylesheet" id="headerStyle" href="css/amirraw.min.css">
     <link rel="stylesheet" id="textStyle" href="css/gilroy.min.css">
@@ -36,24 +37,30 @@
     <script src="Just_Married_files/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
     <script src="Just_Married_files/swiper.min.js" defer=""></script>
 
+    <style class="colors-styles-desktop">
+        @media (min-width:500px) {}
+    </style>
+    <style class="colors-styles-mobile">
+        @media (max-width:500px) {}
+    </style>
 </head>
 
-<body class="sm-template53 sm-color1 sm-scroll_type-1 sm-scroll_speed-1 sm-hfont-0 sm-project-" data-project-id="175562"
-    data-lang="ru">
+<body class="sm-template53 sm-color1 sm-scroll_type-1 sm-scroll_speed-1 sm-hfont-0 sm-project-" data-lang="ru">
     <div class="sm-loader_wrapper">
         <div class="loader"></div>
     </div>
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <main>
         <div class="sm-mob-btn sm-hidden_slow">
             <div class="sm-button open-modal">
                 Подтвердить присутствие
             </div>
         </div>
-        <section class="sm-main sm-edit jsScroll__scrolled" data-type="1" data-jsscroll="" data-jsscroll-slide-top="">
+        
+        <!-- Фото дети -->
+        <section class="sm-main sm-edit jsScroll__scrolled" data-type="1" data-jsscroll="" data-jsscroll-slide-top="">    
             <div class="sm-background-photo sm-background-photo__bg"></div>
-
             <div class="sm-container">
                 <div class="sm-main__img">
                     <div class="sm-main__img__wrapper rotate-left">
@@ -209,7 +216,7 @@
         </section>
 
         <!-- Локация -->
-        <section class="sm-location sm-edit" data-type="4" data-jsscroll="" data-jsscroll-slide-top="">
+        <section class="sm-location sm-edit jsScroll__scrolled" data-type="4" data-jsscroll="" data-jsscroll-slide-top="">
 
             <div class="sm-container">
                 <div class="sm-location__content">
@@ -249,7 +256,7 @@
         </section>
 
         <!--тайминги-->
-        <section class="sm-timing sm-edit" data-type="5" data-jsscroll="" data-jsscroll-slide-top="">
+        <section class="sm-timing sm-edit jsScroll__scrolled" data-type="5" data-jsscroll="" data-jsscroll-slide-top="">
             <div class="sm-background-photo sm-background-photo__bg" style=""></div>
             <div class="sm-container">
                 <h2 class="sm-cormorantRegular-70-30" data-sm-text="TIMING_TITLE" title="Тайминг">Тайминг</h2>
@@ -860,7 +867,7 @@
         <!--/тайминги-->
 
         <!--до нашей свадьбы осталось-->
-        <section class="sm-timer sm-edit" data-type="7" data-jsscroll="" data-jsscroll-slide-top="">
+        <section class="sm-timer sm-edit jsScroll__scrolled" data-type="7" data-jsscroll="" data-jsscroll-slide-top="">
             <picture class="sm-painted-show">
                 <source srcset="img/timer-mobile.webp" media="(max-width: 500px)">
                 <img class="sm-bg_img" src="img/timer.webp" alt="img">
@@ -924,7 +931,7 @@
         </section>
 
         <!-- Пожелания -->
-        <section class="sm-wishes sm-edit" data-type="8" data-jsscroll="" data-jsscroll-slide-top="">
+        <section class="sm-wishes sm-edit jsScroll__scrolled" data-type="8" data-jsscroll="" data-jsscroll-slide-top="">
             <div class="sm-container">
                 <div class="sm-wishes__content">
                     <h2 class="sm-cormorantRegular-70-30 " data-sm-text="WISH_TITLE" title="Пожелания">Пожелания</h2>
@@ -966,7 +973,7 @@
         </section>
 
         <!-- связаться с нами -->
-        <section class="sm-contact sm-edit" data-type="9" data-jsscroll="" data-jsscroll-slide-top="">
+        <section class="sm-contact sm-edit jsScroll__scrolled" data-type="9" data-jsscroll="" data-jsscroll-slide-top="">
             <div class="sm-bg-text">
                 <span data-sm-day="">01</span>
                 <span data-sm-month="">08</span>
@@ -1146,7 +1153,7 @@
         </section>
 
         <!-- Фото -->
-        <section class="sm-bg-image sm-edit" data-type="11" data-jsscroll="" data-jsscroll-slide-top="">
+        <section class="sm-bg-image sm-edit jsScroll__scrolled" data-type="11" data-jsscroll="" data-jsscroll-slide-top="">
             <div class="sm-bg-text">
                 <span>Forever &amp; ever Forever &amp; ever</span>
                 <span>Forever &amp; ever</span>
@@ -1157,7 +1164,7 @@
         </section>
 
         <!-- Футер -->
-        <section class="sm-footer sm-edit" data-type="12" data-jsscroll="" data-jsscroll-slide-top="">
+        <section class="sm-footer sm-edit jsScroll__scrolled" data-type="12" data-jsscroll="" data-jsscroll-slide-top="">
             <picture>
                 <source srcset="img/footer-mobile.webp" media="(max-width: 500px)">
                 <img class="sm-bg_img" src="img/footer.webp" alt="img">
@@ -1500,11 +1507,11 @@
                         parse_mode: 'Markdown'
                     }
                 }).then(() => {
-                    alert('Анкета успешно отправлена!');
+                    alert('Успешно отправлено!');
                     form.reset(); // Очистка формы
                 }).catch(err => {
                     console.error('Ошибка отправки:', err.message);
-                    alert('Произошла ошибка при отправке. Проверьте консоль.');
+                    alert('Произошла ошибка при отправке. Попробуйте со включенным VPN.');
                 });
             });
         });
